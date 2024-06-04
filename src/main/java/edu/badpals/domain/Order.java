@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 @Table(name="t_orders")
 public class Order {
 
-    @Id @GeneratedValue 
-    @Column(name="order_id")
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="ord_id")
     private int ID;
 
     @OneToOne

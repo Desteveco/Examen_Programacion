@@ -6,12 +6,13 @@ import edu.badpals.domain.*;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import jakarta.inject.Inject;
-
-
+import java.util.List;
+import java.util.Optional;
 
 @QuarkusTest
 public class RepoTest {
@@ -153,7 +154,7 @@ public class RepoTest {
      * name, quality y type que el de la peticion
      * y no cualquier otro item de la base de datos
      * que tenga sólo el mismo nombre.
-
+//     * */
     @Test
     public void test_load_item_equal() {
         Assertions.assertThat(repo).isNotNull();
@@ -174,7 +175,7 @@ public class RepoTest {
      * con el nombre indicado
      *
      * Ojo que el nombre del item no es la clave primaria.
-
+//     * */
     @Test
     public void test_load_items() {
         Assertions.assertThat(repo).isNotNull();
@@ -195,7 +196,7 @@ public class RepoTest {
      * El pedido se guarda en la base de datos.
      *
      * Los magos/as mudblood NO pueden comprar un item.
-
+    */
 
     @Test
     @Transactional
@@ -227,6 +228,7 @@ public class RepoTest {
     /**
      * Implementa el metodo createItem() del repositorio
      * que crea un item en la base de datos.
+    */
 
 
     @Test
@@ -252,7 +254,7 @@ public class RepoTest {
      * coincida con el especificado, sino, tu codigo
      * devolvera uno de los pases a backstage que no
      * es el que buscamos.
-
+     */
 
     @Test
     @Transactional
@@ -294,7 +296,7 @@ public class RepoTest {
      * name, quality y type que el de la peticion
      * y no cualquier otro item de la base de datos
      * solo con el mismo nombre.
-
+    */
 
     @Test
     @Transactional

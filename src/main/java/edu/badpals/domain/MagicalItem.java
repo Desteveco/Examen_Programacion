@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name="t_items")
 public class MagicalItem {
 
-    @Id @GeneratedValue(strategy= GenerationType.AUTO)
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="item_id")
     private int ID;
 
@@ -18,6 +18,8 @@ public class MagicalItem {
 
     @Column(name="item_type")
     private String type;
+
+    public MagicalItem(){}
 
     public int getId() {
         return ID;
@@ -33,6 +35,12 @@ public class MagicalItem {
         return type;
     }
 
+    public  MagicalItem(String name, int quality, String type){
+        this.name = name;
+        this.quality = quality;
+        this.type = type;
+    }
+    
     public int getIdFromName(String name){
         return ID;
     }
