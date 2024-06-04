@@ -1,4 +1,4 @@
-package edu.badplas;
+package edu.badpals;
 
 
 import edu.badpals.Repositorio;
