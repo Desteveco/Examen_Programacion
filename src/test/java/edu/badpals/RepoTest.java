@@ -1,7 +1,6 @@
 package edu.badpals;
 
 
-import edu.badpals.Repositorio;
 import edu.badpals.domain.*;
 import io.quarkus.test.junit.QuarkusTest;
 import jakarta.persistence.EntityManager;
