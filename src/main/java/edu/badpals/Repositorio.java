@@ -1,7 +1,6 @@
 package edu.badpals;
 
 import edu.badpals.domain.MagicalItem;
-import edu.badpals.domain.Order;
 import edu.badpals.domain.Wizard;
 import edu.badpals.repository.MagicalItemRepository;
 import edu.badpals.repository.OrderRepository;
